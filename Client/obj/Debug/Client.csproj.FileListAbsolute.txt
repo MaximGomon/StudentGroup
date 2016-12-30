@@ -1,0 +1,16 @@
+c:\users\pan-pc\documents\visual studio 2015\Projects\WebService\Client\bin\Debug\ApplicationInsights.config
+c:\users\pan-pc\documents\visual studio 2015\Projects\WebService\Client\bin\Debug\Client.exe.config
+c:\users\pan-pc\documents\visual studio 2015\Projects\WebService\Client\bin\Debug\Client.exe
+c:\users\pan-pc\documents\visual studio 2015\Projects\WebService\Client\bin\Debug\Client.pdb
+c:\users\pan-pc\documents\visual studio 2015\Projects\WebService\Client\bin\Debug\WebService.dll
+c:\users\pan-pc\documents\visual studio 2015\Projects\WebService\Client\bin\Debug\EntityFramework.dll
+c:\users\pan-pc\documents\visual studio 2015\Projects\WebService\Client\bin\Debug\WebService.pdb
+c:\users\pan-pc\documents\visual studio 2015\Projects\WebService\Client\bin\Debug\EntityFramework.xml
+c:\users\pan-pc\documents\visual studio 2015\Projects\WebService\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+c:\users\pan-pc\documents\visual studio 2015\Projects\WebService\Client\obj\Debug\Client.Main.resources
+c:\users\pan-pc\documents\visual studio 2015\Projects\WebService\Client\obj\Debug\Client.Properties.Resources.resources
+c:\users\pan-pc\documents\visual studio 2015\Projects\WebService\Client\obj\Debug\Client.csproj.GenerateResource.Cache
+c:\users\pan-pc\documents\visual studio 2015\Projects\WebService\Client\obj\Debug\Client.exe
+c:\users\pan-pc\documents\visual studio 2015\Projects\WebService\Client\obj\Debug\Client.pdb
+c:\users\pan-pc\documents\visual studio 2015\Projects\WebService\Client\obj\Debug\Client.AddStudent.resources
+C:\Users\Pan-PC\documents\visual studio 2015\Projects\WebService\Client\obj\Debug\Client.FormUpdateData.resources
