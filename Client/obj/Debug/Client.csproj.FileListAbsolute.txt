@@ -14,3 +14,4 @@ c:\users\pan-pc\documents\visual studio 2015\Projects\WebService\Client\obj\Debu
 c:\users\pan-pc\documents\visual studio 2015\Projects\WebService\Client\obj\Debug\Client.pdb
 c:\users\pan-pc\documents\visual studio 2015\Projects\WebService\Client\obj\Debug\Client.AddStudent.resources
 C:\Users\Pan-PC\documents\visual studio 2015\Projects\WebService\Client\obj\Debug\Client.FormUpdateData.resources
+C:\Users\Pan-PC\documents\visual studio 2015\Projects\WebService\Client\obj\Debug\Client.UpdateOtherData.resources

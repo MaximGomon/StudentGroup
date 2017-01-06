@@ -49,7 +49,6 @@ namespace Client
                 
                 foreach(var i in all)
                 {
-                    MessageBox.Show(i.Name);
                     comboBox.Items.Add(i.Name);
                 }
                 client.Close();

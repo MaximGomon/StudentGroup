@@ -32,6 +32,18 @@ namespace Client.ServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBD/RemoveStudent", ReplyAction="http://tempuri.org/IServiceBD/RemoveStudentResponse")]
         System.Threading.Tasks.Task RemoveStudentAsync(int id, string name, System.DateTime date);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBD/AddOtherData", ReplyAction="http://tempuri.org/IServiceBD/AddOtherDataResponse")]
+        void AddOtherData(int id, string gender, string street, string telephone, string ticket, float middle);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBD/AddOtherData", ReplyAction="http://tempuri.org/IServiceBD/AddOtherDataResponse")]
+        System.Threading.Tasks.Task AddOtherDataAsync(int id, string gender, string street, string telephone, string ticket, float middle);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBD/SetNewId", ReplyAction="http://tempuri.org/IServiceBD/SetNewIdResponse")]
+        void SetNewId();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBD/SetNewId", ReplyAction="http://tempuri.org/IServiceBD/SetNewIdResponse")]
+        System.Threading.Tasks.Task SetNewIdAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -83,6 +95,22 @@ namespace Client.ServiceReference {
         
         public System.Threading.Tasks.Task RemoveStudentAsync(int id, string name, System.DateTime date) {
             return base.Channel.RemoveStudentAsync(id, name, date);
+        }
+        
+        public void AddOtherData(int id, string gender, string street, string telephone, string ticket, float middle) {
+            base.Channel.AddOtherData(id, gender, street, telephone, ticket, middle);
+        }
+        
+        public System.Threading.Tasks.Task AddOtherDataAsync(int id, string gender, string street, string telephone, string ticket, float middle) {
+            return base.Channel.AddOtherDataAsync(id, gender, street, telephone, ticket, middle);
+        }
+        
+        public void SetNewId() {
+            base.Channel.SetNewId();
+        }
+        
+        public System.Threading.Tasks.Task SetNewIdAsync() {
+            return base.Channel.SetNewIdAsync();
         }
     }
 }

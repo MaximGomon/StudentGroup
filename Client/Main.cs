@@ -13,6 +13,7 @@ namespace Client
 {
     public partial class Main : Form
     {
+        private static int id_stud;
         public Main()
         {
             InitializeComponent();
@@ -32,15 +33,15 @@ namespace Client
             {
                 client.Open();
                 var list = client.GetStudent();
-                int count = 0;
+                int count = list.Length;
                 dataGridView_student.Rows.Clear();
+                client.SetNewId();
                 foreach (var stud in list)
                 {
                     dataGridView_student.Rows.Add();
-                    dataGridView_student.Rows[count].Cells[0].Value = stud.Id;
+                    dataGridView_student.Rows[count].Cells[0].Value = count;
                     dataGridView_student.Rows[count].Cells[1].Value = stud.Name;
                     dataGridView_student.Rows[count].Cells[2].Value = stud.Date;
-                    count++;
                 }
                 client.Close();
             }
@@ -79,5 +80,13 @@ namespace Client
             FormUpdateData update = new FormUpdateData();
             update.ShowDialog();
         }
+
+        private void button_update_other_data_Click(object sender, EventArgs e)
+        {
+            UpdateOtherData update = new UpdateOtherData();
+            update.ShowDialog();
+        }
+
+        public static int ReturnId { get { return id_stud = dataGridView_student.CurrentRow.Index; } }
     }     
 }

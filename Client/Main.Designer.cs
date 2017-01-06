@@ -37,15 +37,16 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button_update = new System.Windows.Forms.Button();
             this.button_data = new System.Windows.Forms.Button();
+            this.button_update_other_data = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(dataGridView_student)).BeginInit();
             this.SuspendLayout();
             // 
             // button_add
             // 
             this.button_add.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button_add.Location = new System.Drawing.Point(406, 14);
+            this.button_add.Location = new System.Drawing.Point(395, 14);
             this.button_add.Name = "button_add";
-            this.button_add.Size = new System.Drawing.Size(91, 23);
+            this.button_add.Size = new System.Drawing.Size(110, 23);
             this.button_add.TabIndex = 0;
             this.button_add.Text = "Add student";
             this.button_add.UseVisualStyleBackColor = true;
@@ -86,9 +87,9 @@
             // button_exit
             // 
             this.button_exit.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button_exit.Location = new System.Drawing.Point(406, 228);
+            this.button_exit.Location = new System.Drawing.Point(395, 228);
             this.button_exit.Name = "button_exit";
-            this.button_exit.Size = new System.Drawing.Size(91, 23);
+            this.button_exit.Size = new System.Drawing.Size(110, 23);
             this.button_exit.TabIndex = 2;
             this.button_exit.Text = "Exit";
             this.button_exit.UseVisualStyleBackColor = true;
@@ -97,9 +98,9 @@
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button1.Location = new System.Drawing.Point(406, 49);
+            this.button1.Location = new System.Drawing.Point(395, 49);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 23);
+            this.button1.Size = new System.Drawing.Size(110, 23);
             this.button1.TabIndex = 3;
             this.button1.Text = "Remove student";
             this.button1.UseVisualStyleBackColor = true;
@@ -108,9 +109,9 @@
             // button_update
             // 
             this.button_update.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button_update.Location = new System.Drawing.Point(406, 113);
+            this.button_update.Location = new System.Drawing.Point(395, 142);
             this.button_update.Name = "button_update";
-            this.button_update.Size = new System.Drawing.Size(91, 23);
+            this.button_update.Size = new System.Drawing.Size(110, 23);
             this.button_update.TabIndex = 4;
             this.button_update.Text = "Update table";
             this.button_update.UseVisualStyleBackColor = true;
@@ -118,19 +119,30 @@
             // 
             // button_data
             // 
-            this.button_data.Location = new System.Drawing.Point(406, 82);
+            this.button_data.Location = new System.Drawing.Point(395, 111);
             this.button_data.Name = "button_data";
-            this.button_data.Size = new System.Drawing.Size(91, 23);
+            this.button_data.Size = new System.Drawing.Size(110, 23);
             this.button_data.TabIndex = 5;
             this.button_data.Text = "Update data";
             this.button_data.UseVisualStyleBackColor = true;
             this.button_data.Click += new System.EventHandler(this.button_data_Click);
+            // 
+            // button_update_other_data
+            // 
+            this.button_update_other_data.Location = new System.Drawing.Point(395, 79);
+            this.button_update_other_data.Name = "button_update_other_data";
+            this.button_update_other_data.Size = new System.Drawing.Size(110, 23);
+            this.button_update_other_data.TabIndex = 6;
+            this.button_update_other_data.Text = "Update other data";
+            this.button_update_other_data.UseVisualStyleBackColor = true;
+            this.button_update_other_data.Click += new System.EventHandler(this.button_update_other_data_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(519, 265);
+            this.Controls.Add(this.button_update_other_data);
             this.Controls.Add(this.button_data);
             this.Controls.Add(this.button_update);
             this.Controls.Add(this.button1);
@@ -154,6 +166,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn date;
         private System.Windows.Forms.Button button_update;
         private System.Windows.Forms.Button button_data;
+        private System.Windows.Forms.Button button_update_other_data;
         public static System.Windows.Forms.DataGridView dataGridView_student;
     }
 }

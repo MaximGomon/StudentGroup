@@ -20,5 +20,11 @@ namespace WebService
         [OperationContract]
         void RemoveStudent(int id, string name, DateTime date);
 
+        [OperationContract]
+        void AddOtherData(int id, string gender, string street, string telephone, string ticket, float middle);
+
+        [OperationContract]
+        void SetNewId();
+
     }
 }

@@ -14,5 +14,6 @@ namespace WebService
         }
 
         public DbSet<Student> Students { get; set; }
+        public DbSet<AllDataUser> AllData { get; set; }
     }
 }
