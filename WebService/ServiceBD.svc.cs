@@ -53,9 +53,11 @@ namespace WebService
         {
             using (DbConnect db = new DbConnect())
             {
+                AllDataStudent stud = new AllDataStudent { Id = 1, NumberStudent = studentID, Gender = gender, MiddleMark = middle, NumberSdudentTickets = ticket, Street = street, Telephone = telephone };
                 try
                 {
-                    db.AllDataStud.Add(new AllDataStudent {NumberStudent = studentID, Gender = gender, MiddleMark = middle, NumberSdudentTickets = ticket, Street = street, Telephone = telephone});
+                    //db.AllDataStud.Add(new AllDataStudent {NumberStudent = studentID, Gender = gender, MiddleMark = middle, NumberSdudentTickets = ticket, Street = street, Telephone = telephone});
+                    db.AllDataStud.Add(stud);
                     db.SaveChanges();
                 }catch(Exception ex)
                 {
