@@ -33,15 +33,15 @@ namespace Client
             {
                 client.Open();
                 var list = client.GetStudent();
-                int count = list.Length;
+                int count = 1;
                 dataGridView_student.Rows.Clear();
-                client.SetNewId();
                 foreach (var stud in list)
                 {
                     dataGridView_student.Rows.Add();
-                    dataGridView_student.Rows[count].Cells[0].Value = count;
-                    dataGridView_student.Rows[count].Cells[1].Value = stud.Name;
-                    dataGridView_student.Rows[count].Cells[2].Value = stud.Date;
+                    dataGridView_student.Rows[count - 1].Cells[0].Value = count;
+                    dataGridView_student.Rows[count - 1].Cells[1].Value = stud.Name;
+                    dataGridView_student.Rows[count - 1].Cells[2].Value = stud.Date;
+                    count++;
                 }
                 client.Close();
             }
@@ -87,6 +87,25 @@ namespace Client
             update.ShowDialog();
         }
 
-        public static int ReturnId { get { return id_stud = dataGridView_student.CurrentRow.Index; } }
+        public static int Id {
+            get
+            {
+                int ID = 0;
+                using (ServiceBDClient client = new ServiceBDClient())
+                {
+                    client.Open();
+                    var list = client.GetStudent();
+                    for (int i = 0; i < dataGridView_student.RowCount; i++)
+                    {
+                        if (i == dataGridView_student.CurrentRow.Index)
+                        {
+                            ID = list[i].Id;
+                        }
+                    }
+                    client.Close();
+                }
+                return ID;
+            }
+        }
     }     
 }

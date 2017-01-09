@@ -53,42 +53,24 @@ namespace WebService
         {
             using (DbConnect db = new DbConnect())
             {
-                AllDataUser stud = db.AllData.Find(id);
-                stud.Gender = gender;
-                stud.Street = street;
-                stud.Telephone = telephone;
-                stud.NumberSdudentTickets = ticket;
-                stud.MiddleMark = middle;
-
-                if (stud != null)
-                {
-                    db.AllData.Add(stud);
-                    db.SaveChanges();
-                }
-
-            }
-        }
-
-        public void SetNewId()
-        {
-            using (DbConnect db = new DbConnect())
-            {
-                var list = db.Students;
-                int countStudent = 1;
+                AllDataStudent stud = new AllDataStudent(1, gender, street, telephone, ticket, middle);
+                //stud.Id = 1;
+                //stud.Gender = gender;
+                //stud.Street = street;
+                //stud.Telephone = telephone;
+                //stud.NumberSdudentTickets = ticket;
+                //stud.MiddleMark = middle;
                 try
                 {
-                    foreach(var i in list)
+                    if (stud != null)
                     {
-                        i.Id = countStudent;
-                        countStudent++;
+                        db.AllDataStudents.Add(stud);
+                        db.SaveChanges();
                     }
-                    db.SaveChanges();
-                }
-                catch(Exception ex)
+                }catch(Exception ex)
                 {
                     string s = ex.ToString();
-                }
-                //db.SaveChanges();
+                }   
             }
         }
     }

@@ -41,14 +41,14 @@ namespace Client
             {
                 client.Open();
                 var list = client.GetStudent();
-                int count = 0;
+                int count = 1;
                 Main.dataGridView_student.Rows.Clear();
                 foreach (var stud in list)
                 {
                     Main.dataGridView_student.Rows.Add();
-                    Main.dataGridView_student.Rows[count].Cells[0].Value = stud.Id;
-                    Main.dataGridView_student.Rows[count].Cells[1].Value = stud.Name;
-                    Main.dataGridView_student.Rows[count].Cells[2].Value = stud.Date;
+                    Main.dataGridView_student.Rows[count-1].Cells[0].Value = count;
+                    Main.dataGridView_student.Rows[count-1].Cells[1].Value = stud.Name;
+                    Main.dataGridView_student.Rows[count-1].Cells[2].Value = stud.Date;
                     count++;
                 }
                 client.Close();

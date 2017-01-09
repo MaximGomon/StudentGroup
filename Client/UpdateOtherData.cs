@@ -34,13 +34,13 @@ namespace Client
             using (ServiceBDClient client = new ServiceBDClient())
             {
                 client.Open();
-                var all = from t in client.GetStudent() where t.Id == Main.ReturnId select t;
-                MessageBox.Show(Main.ReturnId.ToString());
+                var all = from t in client.GetStudent() where t.Name.Length > 0 select t;
                 foreach (var i in all)
                 {
-                    if (i.Id == Main.ReturnId)
+                    if (i.Id == Main.Id)
                     {
-                        client.AddOtherData(Main.ReturnId, comboBox_mender.Text, textBox_address.Text, textBox_telephone.Text, textBox_tickets.Text, float.Parse(textBox_middle.Text));
+                        //client.AddOtherData(Main.Id, comboBox_mender.Text, textBox_address.Text, textBox_telephone.Text, textBox_tickets.Text, float.Parse(textBox_middle.Text));
+                        client.AddOtherData(Main.Id, comboBox_mender.Text, textBox_address.Text, textBox_telephone.Text, textBox_tickets.Text, 4);
                     }
                 }
                 client.Close();

@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebService
 {
-    public class AllDataUser
+    public class AllDataStudent
     {
         private int id;
         private string gender;
@@ -13,7 +15,9 @@ namespace WebService
         private string telephone;
         private string numberSdudentTickets;
         private float middleMark;
-        public AllDataUser(int id, string gender, string street, string telephone,
+
+        public AllDataStudent() { }
+        public AllDataStudent(int id, string gender, string street, string telephone,
             string ticket, float middle)
         {
             Id = id;
