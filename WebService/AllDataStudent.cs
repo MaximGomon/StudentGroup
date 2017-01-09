@@ -10,6 +10,7 @@ namespace WebService
     public class AllDataStudent
     {
         private int id;
+        private int numberStudent;
         private string gender;
         private string street;
         private string telephone;
@@ -17,10 +18,11 @@ namespace WebService
         private float middleMark;
 
         public AllDataStudent() { }
-        public AllDataStudent(int id, string gender, string street, string telephone,
+        public AllDataStudent(int numberStudent, string gender, string street, string telephone,
             string ticket, float middle)
         {
-            Id = id;
+            Id = 1;
+            NumberStudent = numberStudent;
             Gender = gender;
             Street = street;
             Telephone = telephone;
@@ -29,6 +31,7 @@ namespace WebService
         }
 
         public int Id { get { return id; } set { id = value; } }
+        public int NumberStudent { get { return numberStudent; } set { numberStudent = value; } }
         public string Gender { get { return gender; } set { gender = value; } }
         public string Street { get { return street; } set { street = value; } }
         public string Telephone { get { return telephone; } set { telephone = value; } }

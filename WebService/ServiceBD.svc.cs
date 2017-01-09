@@ -49,28 +49,19 @@ namespace WebService
             }
         }
 
-        public void AddOtherData(int id, string gender, string street, string telephone, string ticket, float middle)
+        public void AddOtherData(int studentID, string gender, string street, string telephone, string ticket, float middle)
         {
             using (DbConnect db = new DbConnect())
             {
-                AllDataStudent stud = new AllDataStudent(1, gender, street, telephone, ticket, middle);
-                //stud.Id = 1;
-                //stud.Gender = gender;
-                //stud.Street = street;
-                //stud.Telephone = telephone;
-                //stud.NumberSdudentTickets = ticket;
-                //stud.MiddleMark = middle;
                 try
                 {
-                    if (stud != null)
-                    {
-                        db.AllDataStudents.Add(stud);
-                        db.SaveChanges();
-                    }
+                    db.AllDataStud.Add(new AllDataStudent {NumberStudent = studentID, Gender = gender, MiddleMark = middle, NumberSdudentTickets = ticket, Street = street, Telephone = telephone});
+                    db.SaveChanges();
                 }catch(Exception ex)
                 {
                     string s = ex.ToString();
-                }   
+                }
+                
             }
         }
     }
