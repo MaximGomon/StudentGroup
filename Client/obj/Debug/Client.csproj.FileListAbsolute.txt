@@ -15,3 +15,6 @@ c:\users\pan-pc\documents\visual studio 2015\Projects\WebService\Client\obj\Debu
 c:\users\pan-pc\documents\visual studio 2015\Projects\WebService\Client\obj\Debug\Client.AddStudent.resources
 C:\Users\Pan-PC\documents\visual studio 2015\Projects\WebService\Client\obj\Debug\Client.FormUpdateData.resources
 C:\Users\Pan-PC\documents\visual studio 2015\Projects\WebService\Client\obj\Debug\Client.UpdateOtherData.resources
+C:\Users\Pan-PC\documents\visual studio 2015\Projects\WebService\Client\bin\Debug\App_Data\DatabaseStudent.mdf
+C:\Users\Pan-PC\documents\visual studio 2015\Projects\WebService\Client\bin\Debug\App_Data\DatabaseStudent_log.ldf
+C:\Users\Pan-PC\documents\visual studio 2015\Projects\WebService\Client\obj\Debug\Client.ShowOtherData.resources

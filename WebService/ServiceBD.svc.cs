@@ -62,9 +62,42 @@ namespace WebService
                 }catch(Exception ex)
                 {
                     string s = ex.ToString();
+                    string q = "QQQ";
                 }
                 
             }
+        }
+
+        public void UpdateOtherInfo(int studentID, string gender, string street, string telephone, string ticket, float middle)
+        {
+            using (DbConnect db = new DbConnect())
+            {
+                foreach(var i in db.AllDataStud)
+                {
+                    if(i.NumberStudent == studentID)
+                    {
+                        //i.NumberStudent = studentID;
+                        //i.Gender = gender;
+                        //i.Telephone = telephone;
+                        //i.Street = street;
+                        //i.MiddleMark = middle;
+                        //i.NumberSdudentTickets = ticket;
+                        AllDataStudent stud = new AllDataStudent {NumberStudent = studentID, Gender = gender, MiddleMark = middle, NumberSdudentTickets = ticket, Street = street, Telephone = telephone };
+                        db.AllDataStud.Add(stud);
+                    }
+                }
+                db.SaveChanges();
+            }
+        }
+
+        public List<AllDataStudent> GetOtherInfo()
+        {
+            List<AllDataStudent> list = new List<AllDataStudent>();
+            using (DbConnect db = new DbConnect())
+            {
+                list = db.AllDataStud.ToList();
+            }
+            return list;
         }
     }
 }

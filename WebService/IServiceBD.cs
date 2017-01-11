@@ -23,5 +23,10 @@ namespace WebService
         [OperationContract]
         void AddOtherData(int id, string gender, string street, string telephone, string ticket, float middle);
 
+        [OperationContract]
+        void UpdateOtherInfo(int studentID, string gender, string street, string telephone, string ticket, float middle);
+
+        [OperationContract]
+        List<AllDataStudent> GetOtherInfo();
     }
 }

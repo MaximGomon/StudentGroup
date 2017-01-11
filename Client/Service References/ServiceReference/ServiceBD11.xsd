@@ -14,4 +14,22 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Student" nillable="true" type="tns:Student" />
+  <xs:complexType name="ArrayOfAllDataStudent">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AllDataStudent" nillable="true" type="tns:AllDataStudent" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAllDataStudent" nillable="true" type="tns:ArrayOfAllDataStudent" />
+  <xs:complexType name="AllDataStudent">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="MiddleMark" type="xs:float" />
+      <xs:element minOccurs="0" name="NumberSdudentTickets" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumberStudent" type="xs:int" />
+      <xs:element minOccurs="0" name="Street" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Telephone" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AllDataStudent" nillable="true" type="tns:AllDataStudent" />
 </xs:schema>

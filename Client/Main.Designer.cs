@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.button_add = new System.Windows.Forms.Button();
-            dataGridView_student = new System.Windows.Forms.DataGridView();
+            this.dataGridView_student = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button_exit = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button_update = new System.Windows.Forms.Button();
-            this.button_data = new System.Windows.Forms.Button();
             this.button_update_other_data = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(dataGridView_student)).BeginInit();
+            this.button_showOtherData = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_student)).BeginInit();
             this.SuspendLayout();
             // 
             // button_add
@@ -54,17 +54,17 @@
             // 
             // dataGridView_student
             // 
-            dataGridView_student.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dataGridView_student.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridView_student.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView_student.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridView_student.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_student.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.name,
             this.date});
-            dataGridView_student.Location = new System.Drawing.Point(15, 12);
-            dataGridView_student.Name = "dataGridView_student";
-            dataGridView_student.Size = new System.Drawing.Size(366, 237);
-            dataGridView_student.TabIndex = 1;
+            this.dataGridView_student.Location = new System.Drawing.Point(15, 12);
+            this.dataGridView_student.Name = "dataGridView_student";
+            this.dataGridView_student.Size = new System.Drawing.Size(366, 237);
+            this.dataGridView_student.TabIndex = 1;
             // 
             // id
             // 
@@ -109,23 +109,13 @@
             // button_update
             // 
             this.button_update.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button_update.Location = new System.Drawing.Point(395, 142);
+            this.button_update.Location = new System.Drawing.Point(395, 109);
             this.button_update.Name = "button_update";
             this.button_update.Size = new System.Drawing.Size(110, 23);
             this.button_update.TabIndex = 4;
             this.button_update.Text = "Update table";
             this.button_update.UseVisualStyleBackColor = true;
             this.button_update.Click += new System.EventHandler(this.button_update_Click);
-            // 
-            // button_data
-            // 
-            this.button_data.Location = new System.Drawing.Point(395, 111);
-            this.button_data.Name = "button_data";
-            this.button_data.Size = new System.Drawing.Size(110, 23);
-            this.button_data.TabIndex = 5;
-            this.button_data.Text = "Update data";
-            this.button_data.UseVisualStyleBackColor = true;
-            this.button_data.Click += new System.EventHandler(this.button_data_Click);
             // 
             // button_update_other_data
             // 
@@ -137,21 +127,31 @@
             this.button_update_other_data.UseVisualStyleBackColor = true;
             this.button_update_other_data.Click += new System.EventHandler(this.button_update_other_data_Click);
             // 
+            // button_showOtherData
+            // 
+            this.button_showOtherData.Location = new System.Drawing.Point(395, 139);
+            this.button_showOtherData.Name = "button_showOtherData";
+            this.button_showOtherData.Size = new System.Drawing.Size(110, 23);
+            this.button_showOtherData.TabIndex = 7;
+            this.button_showOtherData.Text = "Show detail data";
+            this.button_showOtherData.UseVisualStyleBackColor = true;
+            this.button_showOtherData.Click += new System.EventHandler(this.button_showOtherData_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(519, 265);
+            this.Controls.Add(this.button_showOtherData);
             this.Controls.Add(this.button_update_other_data);
-            this.Controls.Add(this.button_data);
             this.Controls.Add(this.button_update);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button_exit);
-            this.Controls.Add(dataGridView_student);
+            this.Controls.Add(this.dataGridView_student);
             this.Controls.Add(this.button_add);
             this.Name = "Main";
             this.Text = "Client";
-            ((System.ComponentModel.ISupportInitialize)(dataGridView_student)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_student)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -165,9 +165,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn date;
         private System.Windows.Forms.Button button_update;
-        private System.Windows.Forms.Button button_data;
         private System.Windows.Forms.Button button_update_other_data;
-        public static System.Windows.Forms.DataGridView dataGridView_student;
+        private System.Windows.Forms.Button button_showOtherData;
+        public System.Windows.Forms.DataGridView dataGridView_student;
     }
 }
 

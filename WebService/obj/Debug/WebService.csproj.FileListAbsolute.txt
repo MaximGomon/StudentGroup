@@ -20,3 +20,6 @@ c:\users\pan-pc\documents\visual studio 2015\Projects\WebService\WebService\bin\
 c:\users\pan-pc\documents\visual studio 2015\Projects\WebService\WebService\bin\Microsoft.ApplicationInsights.xml
 c:\users\pan-pc\documents\visual studio 2015\Projects\WebService\WebService\obj\Debug\WebService.dll
 c:\users\pan-pc\documents\visual studio 2015\Projects\WebService\WebService\obj\Debug\WebService.pdb
+C:\Users\Pan-PC\documents\visual studio 2015\Projects\WebService\WebService\bin\App_Data\DatabaseStudent.mdf
+C:\Users\Pan-PC\documents\visual studio 2015\Projects\WebService\WebService\bin\App_Data\DatabaseStudent_log.ldf
+C:\Users\Pan-PC\documents\visual studio 2015\Projects\WebService\WebService\obj\Debug\WebService.csprojResolveAssemblyReference.cache

@@ -39,11 +39,17 @@ namespace Client.ServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBD/AddOtherData", ReplyAction="http://tempuri.org/IServiceBD/AddOtherDataResponse")]
         System.Threading.Tasks.Task AddOtherDataAsync(int id, string gender, string street, string telephone, string ticket, float middle);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBD/SetNewId", ReplyAction="http://tempuri.org/IServiceBD/SetNewIdResponse")]
-        void SetNewId();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBD/UpdateOtherInfo", ReplyAction="http://tempuri.org/IServiceBD/UpdateOtherInfoResponse")]
+        void UpdateOtherInfo(int studentID, string gender, string street, string telephone, string ticket, float middle);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBD/SetNewId", ReplyAction="http://tempuri.org/IServiceBD/SetNewIdResponse")]
-        System.Threading.Tasks.Task SetNewIdAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBD/UpdateOtherInfo", ReplyAction="http://tempuri.org/IServiceBD/UpdateOtherInfoResponse")]
+        System.Threading.Tasks.Task UpdateOtherInfoAsync(int studentID, string gender, string street, string telephone, string ticket, float middle);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBD/GetOtherInfo", ReplyAction="http://tempuri.org/IServiceBD/GetOtherInfoResponse")]
+        WebService.AllDataStudent[] GetOtherInfo();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBD/GetOtherInfo", ReplyAction="http://tempuri.org/IServiceBD/GetOtherInfoResponse")]
+        System.Threading.Tasks.Task<WebService.AllDataStudent[]> GetOtherInfoAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -105,12 +111,20 @@ namespace Client.ServiceReference {
             return base.Channel.AddOtherDataAsync(id, gender, street, telephone, ticket, middle);
         }
         
-        public void SetNewId() {
-            base.Channel.SetNewId();
+        public void UpdateOtherInfo(int studentID, string gender, string street, string telephone, string ticket, float middle) {
+            base.Channel.UpdateOtherInfo(studentID, gender, street, telephone, ticket, middle);
         }
         
-        public System.Threading.Tasks.Task SetNewIdAsync() {
-            return base.Channel.SetNewIdAsync();
+        public System.Threading.Tasks.Task UpdateOtherInfoAsync(int studentID, string gender, string street, string telephone, string ticket, float middle) {
+            return base.Channel.UpdateOtherInfoAsync(studentID, gender, street, telephone, ticket, middle);
+        }
+        
+        public WebService.AllDataStudent[] GetOtherInfo() {
+            return base.Channel.GetOtherInfo();
+        }
+        
+        public System.Threading.Tasks.Task<WebService.AllDataStudent[]> GetOtherInfoAsync() {
+            return base.Channel.GetOtherInfoAsync();
         }
     }
 }

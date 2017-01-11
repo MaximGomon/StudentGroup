@@ -29,16 +29,6 @@ namespace Client
             Application.Exit();
         }
 
-        private void button_update_Click(object sender, EventArgs e)
-        {
-            using (ServiceBDClient client = new ServiceBDClient())
-            {
-                client.Open();
-                
-                client.Close();
-            }
-        }
-
         private void GetStudent()
         {
             using (ServiceBDClient client = new ServiceBDClient())

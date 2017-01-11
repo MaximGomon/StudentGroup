@@ -73,6 +73,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="ShowOtherData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowOtherData.Designer.cs">
+      <DependentUpon>ShowOtherData.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateOtherData.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,9 +103,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ShowOtherData.resx">
+      <DependentUpon>ShowOtherData.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdateOtherData.resx">
       <DependentUpon>UpdateOtherData.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\WebService.AllDataStudent.datasource" />
     <None Include="Properties\DataSources\WebService.Student.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

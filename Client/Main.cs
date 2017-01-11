@@ -99,13 +99,21 @@ namespace Client
                     {
                         if (i == dataGridView_student.CurrentRow.Index)
                         {
+                            MessageBox.Show(dataGridView_student.CurrentRow.Index.ToString());
                             ID = list[i].Id;
+                            MessageBox.Show(ID.ToString());
                         }
                     }
                     client.Close();
                 }
                 return ID;
             }
+        }
+
+        private void button_showOtherData_Click(object sender, EventArgs e)
+        {
+            ShowOtherData show = new ShowOtherData();
+            show.ShowDialog();
         }
     }     
 }

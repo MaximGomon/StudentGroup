@@ -31,11 +31,17 @@
   <wsdl:message name="IServiceBD_AddOtherData_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddOtherDataResponse" />
   </wsdl:message>
-  <wsdl:message name="IServiceBD_SetNewId_InputMessage">
-    <wsdl:part name="parameters" element="tns:SetNewId" />
+  <wsdl:message name="IServiceBD_UpdateOtherInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOtherInfo" />
   </wsdl:message>
-  <wsdl:message name="IServiceBD_SetNewId_OutputMessage">
-    <wsdl:part name="parameters" element="tns:SetNewIdResponse" />
+  <wsdl:message name="IServiceBD_UpdateOtherInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOtherInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBD_GetOtherInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOtherInfo" />
+  </wsdl:message>
+  <wsdl:message name="IServiceBD_GetOtherInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOtherInfoResponse" />
   </wsdl:message>
   <wsdl:portType name="IServiceBD">
     <wsdl:operation name="AddStudent">
@@ -54,9 +60,13 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceBD/AddOtherData" message="tns:IServiceBD_AddOtherData_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServiceBD/AddOtherDataResponse" message="tns:IServiceBD_AddOtherData_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="SetNewId">
-      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBD/SetNewId" message="tns:IServiceBD_SetNewId_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBD/SetNewIdResponse" message="tns:IServiceBD_SetNewId_OutputMessage" />
+    <wsdl:operation name="UpdateOtherInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBD/UpdateOtherInfo" message="tns:IServiceBD_UpdateOtherInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBD/UpdateOtherInfoResponse" message="tns:IServiceBD_UpdateOtherInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOtherInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceBD/GetOtherInfo" message="tns:IServiceBD_GetOtherInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceBD/GetOtherInfoResponse" message="tns:IServiceBD_GetOtherInfo_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IServiceBD" type="tns:IServiceBD">
@@ -97,8 +107,17 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="SetNewId">
-      <soap:operation soapAction="http://tempuri.org/IServiceBD/SetNewId" style="document" />
+    <wsdl:operation name="UpdateOtherInfo">
+      <soap:operation soapAction="http://tempuri.org/IServiceBD/UpdateOtherInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOtherInfo">
+      <soap:operation soapAction="http://tempuri.org/IServiceBD/GetOtherInfo" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

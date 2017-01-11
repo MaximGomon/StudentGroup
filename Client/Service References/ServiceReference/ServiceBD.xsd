@@ -57,14 +57,33 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="SetNewId">
+  <xs:element name="UpdateOtherInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="studentID" type="xs:int" />
+        <xs:element minOccurs="0" name="gender" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="street" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="telephone" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ticket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="middle" type="xs:float" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateOtherInfoResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="SetNewIdResponse">
+  <xs:element name="GetOtherInfo">
     <xs:complexType>
       <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOtherInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WebService" minOccurs="0" name="GetOtherInfoResult" nillable="true" type="q2:ArrayOfAllDataStudent" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
 </xs:schema>
