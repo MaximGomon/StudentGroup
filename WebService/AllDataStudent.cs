@@ -18,6 +18,7 @@ namespace WebService
         private float middleMark;
 
         public AllDataStudent() { }
+        //ToDo remove
         public AllDataStudent(int numberStudent, string gender, string street, string telephone,
             string ticket, float middle)
         {
@@ -30,11 +31,14 @@ namespace WebService
             MiddleMark = middleMark;
         }
 
+        //ToDo convert to auto-property
         public int Id { get { return id; } set { id = value; } }
         public int NumberStudent { get { return numberStudent; } set { numberStudent = value; } }
+        //ToDo add data annotation (like max length attribute)
         public string Gender { get { return gender; } set { gender = value; } }
         public string Street { get { return street; } set { street = value; } }
         public string Telephone { get { return telephone; } set { telephone = value; } }
+        //ToDo Can student have more that one ticket?
         public string NumberSdudentTickets { get { return numberSdudentTickets; } set { numberSdudentTickets = value; } }
         public float MiddleMark { get { return middleMark; } set { middleMark = value; } }
     }

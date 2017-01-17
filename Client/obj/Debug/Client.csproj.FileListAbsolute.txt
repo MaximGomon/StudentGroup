@@ -18,3 +18,6 @@ C:\Users\Pan-PC\documents\visual studio 2015\Projects\WebService\Client\obj\Debu
 C:\Users\Pan-PC\documents\visual studio 2015\Projects\WebService\Client\bin\Debug\App_Data\DatabaseStudent.mdf
 C:\Users\Pan-PC\documents\visual studio 2015\Projects\WebService\Client\bin\Debug\App_Data\DatabaseStudent_log.ldf
 C:\Users\Pan-PC\documents\visual studio 2015\Projects\WebService\Client\obj\Debug\Client.ShowOtherData.resources
+C:\Users\mhomon\Documents\StudentGroup\Client\bin\Debug\Client.exe.config
+C:\Users\mhomon\Documents\StudentGroup\Client\obj\Debug\Client.exe
+C:\Users\mhomon\Documents\StudentGroup\Client\obj\Debug\Client.pdb
